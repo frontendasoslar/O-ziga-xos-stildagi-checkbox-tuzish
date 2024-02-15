@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O'ziga xos stildagi checkbox tuzish</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <form class="form" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset>
+        <legend>Qaysi sport turiga qiziqasiz?</legend>
+        <div class="form-inner">
+          <!-- Chekboxlar matini bosilganda ham chekked bo'lishi uchun har bir imputni <label></label> ga o'rab qo'yamiz -->
+            <label class="chekbox-label">
+              <input class="visuallyhidden chekbox chekbox-tennis" type="checkbox" name="ping-pong">
+              <span class="chekbox-controller"></span>
+              <span class="chekbox-text">Stol tennis</span>
+            </label>
+
+            <label class="chekbox-label">
+              <input class="visuallyhidden chekbox chekbox-volebool" type="checkbox" name="voleball">
+              <span class="chekbox-controller"></span>
+              <span class="chekbox-text">Valeyboll</span>
+            </label>
+
+            <label class="chekbox-label">
+              <input class="visuallyhidden chekbox chekbox-baskedboll" type="checkbox" name="baskedball">
+              <span class="chekbox-controller"></span>
+              <span class="chekbox-text">Baskedboll</span>
+            </label>
+
+            <label class="chekbox-label">
+              <input class="visuallyhidden chekbox chekbox-hokkey" type="checkbox" name="hokkey" disabled>
+              <span class="chekbox-controller"></span>
+              <span class="chekbox-text">Hokkey</span>
+            </label>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

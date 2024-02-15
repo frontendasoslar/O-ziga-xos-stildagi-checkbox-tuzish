@@ -1,0 +1,80 @@
+/* Chekboxni o'zini bekitib qo'yish uchun ishlatiladi */
+.visuallyhidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.container {
+  height: 100%;
+  max-width: 1000px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Chekboxlarni ustma ust qilish uchun */
+.form-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Bo'sh joy bosilganda chekbox chekked bo'lmasliginuchun ishlatiladi */
+.chekbox-label {
+  display: flex;
+  align-items: center;
+}
+
+/* Ustma-ust joylashgan chekboxlar orasini ochish uchun */
+.chekbox-label:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+/* Chekbox bosilganda ikonkalar paydo boladigan quticha uchun */
+.chekbox-controller {
+ width: 24px;
+ height: 24px;
+ border: 1px solid #000;
+ border-radius: 5px;
+ margin-right: 8px;
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: 16px;
+}
+
+/* Chekbox fokus bo'lganda ikonka paydo boladigan quticha atrofida soya chiqishi uchun */
+.chekbox:focus ~ .chekbox-controller {
+  box-shadow: 0px 0px 0px 3px #0e85f3;
+}
+
+/* Chekbox chekked bo'lganda ikonka quttisida ikonka paydo bo'ladi */
+.chekbox-tennis:checked ~ .chekbox-controller {
+  background-image: url('../img/ping-pong-2-svgrepo-com.svg');
+}
+
+/* Chekbox chekked bo'lganda ikonka quttisida ikonka paydo bo'ladi */
+.chekbox-volebool:checked ~ .chekbox-controller {
+  background-image: url('../img/sport-ball-svgrepo-com.svg');
+}
+
+/* Chekbox chekked bo'lganda ikonka quttisida ikonka paydo bo'ladi */
+.chekbox-baskedboll:checked ~ .chekbox-controller {
+  background-image: url('../img/sport-basketball-svgrepo-com.svg');
+}
+
+/* Chekbox chekked bo'lganda ikonka quttisida ikonka paydo bo'ladi */
+.chekbox-hokkey:checked ~ .chekbox-controller {
+  background-image: url('../img/hockey-ice-sports-svgrepo-com.svg');
+}
+
+/* Chekbox disabled bo'lganda ikonka quttisi va matni xira bo'ladi */
+.chekbox:disabled ~ .chekbox-controller,
+.chekbox:disabled ~ .chekbox-text {
+  opacity: 0.5;
+}
